@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download Cakemarketincome</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        text-align: center;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <button id="downloadBtn">Download Cakemarketincome.xlsx</button>
+</div>
+
+<script>
+document.getElementById('downloadBtn').addEventListener('click', function() {
+    // Specify the file URL
+    var fileURL = 'Cakemarketincome.xlsx';
+
+    // Create an anchor element
+    var a = document.createElement('a');
+    
+    // Set the file URL as the anchor's href
+    a.href = fileURL;
+
+    // Set an empty string for the download attribute
+    a.download = '';
+
+    // Append the anchor to the body
+    document.body.appendChild(a);
+
+    // Trigger a click on the anchor
+    a.click();
+
+    // Remove the anchor from the body
+    document.body.removeChild(a);
+});
+</script>
+
+</body>
+</html>
